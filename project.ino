@@ -6,7 +6,6 @@ const int fsrA = A0;
 const int fsrB = A1;
 const int fsrC = A2;
 const int fsrD = A3;
-//const int builtinled = D13;
 const int ledPresence = 8;
 const int ledContinuity = 9;
 
@@ -39,7 +38,7 @@ void loop() {
   bool pressureNow = (vA > THRESHOLD || vB > THRESHOLD || vC > THRESHOLD || vD > THRESHOLD );
   digitalWrite(ledPresence, pressureNow ? HIGH : LOW);
 
-  // ===== HERE IS THE 10-SECOND CRITERIA CHECK =====
+  // ===== HERE IS THE 10-SECOND CRITERIA CHECK 👇 =====
   if (pressureNow) {
     if (!continuousPresence) {
       continuousPresence = true;
@@ -47,6 +46,7 @@ void loop() {
     }
     if (now - continuityStartTime >= REQUIRED_CONTINUITY_MS) {
       digitalWrite(ledContinuity, HIGH); // LED2 ON after 10 sec continuous pressure
+      
     }
   } else {
     continuousPresence = false;
