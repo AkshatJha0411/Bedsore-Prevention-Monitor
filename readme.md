@@ -1,4 +1,5 @@
-## AR-520 Design Practicum of Mechatronic Systems: Pressure Monitoring Aid for Bedsore Prevention
+## AR-520 Design Practicum of Mechatronic Systems Project: 
+## Pressure Monitoring Aid for Bedsore Prevention
 
 ### 💡 Project Overview
 
